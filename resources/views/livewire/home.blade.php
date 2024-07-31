@@ -42,7 +42,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if($dados_album)
+                        @if($dados_album && $dados_album != '[]')
                             @foreach ($dados_album as $item)
                                 <tr class="text-center">
                                     <th scope="row">{{ $item->id }}</th>
