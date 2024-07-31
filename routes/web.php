@@ -17,8 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', \App\Http\Livewire\LoginLivewire::class)->name('login');
 Route::get('/cadastro', \App\Http\Livewire\CadastroLivewire::class)->name('cadastro');
 
-
-
 Route::middleware('auth')->group(function () {
     Route::get('/home', \App\Http\Livewire\HomeAlbumLivewire::class)->name('home');
 

@@ -43,7 +43,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if($dados_faixa)
+                        @if($dados_faixas)
                             @foreach ($dados_faixas as $item)
                             <tr class="text-center">
                                 <th scope="row">{{ $item->id }}</th>
