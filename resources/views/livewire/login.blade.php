@@ -1,4 +1,29 @@
     <div class="row w-50 m-auto">
+        @if (Session::has('message'))
+        <div class="alert alert-success border-0 bg-success alert-dismissible fade show py-1 col-xl-9 mx-auto">
+            <div class="d-flex align-items-center">
+                <div class="font-35 text-white">
+                    <i class='bx bxs-check-circle'></i>
+                </div>
+                <div class="ms-3">
+                    <h6 class="mb-0 text-white">Aviso</h6>
+                    <div class="text-white">{{ session('message') }}</div>
+                </div>
+            </div>
+        </div>
+        @elseif (Session::has('message_erro'))
+        <div class="alert alert-danger border-0 bg-danger alert-dismissible fade show py-1 col-xl-9 mx-auto">
+            <div class="d-flex align-items-center">
+                <div class="font-35 text-white">
+                    <i class='bx bx-error-circle'></i>
+                </div>
+                <div class="ms-3">
+                    <h6 class="mb-0 text-white">Aviso</h6>
+                    <div class="text-white">{{ session('message_erro') }}</div>
+                </div>
+            </div>
+        </div>
+    @endif
         <div class="col-xl-7 mx-auto">
             <div class="card border-0  >
                 <div class="card-body p-5">

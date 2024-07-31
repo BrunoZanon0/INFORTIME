@@ -22,9 +22,7 @@ class LoginLivewire extends Component
         if (Auth::attempt($credentials)) {
             return redirect()->intended('/home');
         } else {
-            throw ValidationException::withMessages([
-                'email' => ['As credenciais fornecidas estão incorretas.'],
-            ]);
+            session()->flash('message_erro', 'Email ou senha inválida!');
         }
     }
 
